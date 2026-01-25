@@ -19,6 +19,18 @@ export default function Analytics() {
     return totalHours;
   };
 
+  const getLanguageDifficultyAutonomy = (language) => {
+    let totalDifficulty = 0; // Example value
+    let totalAutonomy = 0;
+    projects.forEach((project) => {
+      if (project.languages.includes(language)) {
+        totalDifficulty += project.ObjectiveDifficulty;
+        totalAutonomy += project.Autonomy;
+      }
+    });
+    return totalDifficulty * totalAutonomy;
+  };
+
   /* Mastery formula (Hours * Objective difficulty * Autonomy)
   120 * 10 * 2 = 2400
   Autonomy (1-2): .5 Guided, 1 = Independent, 1.5 = Designing+Refactoring+Optimizing, 2 = Innovation
@@ -38,9 +50,39 @@ export default function Analytics() {
         </Card>
         <Card color="bg-(--subtle-red2)" margin="mb-4">
           <span className="font-bold">Mastery</span>
-          <Card color="bg-(--warm-gray)" margin="mt-2">
-            Lua
-          </Card>
+          {Object.entries(languageImages).map(
+            ([languageName, languageData]) => {
+              const icon = languageData.src;
+              const hours = getLanguageHours(languageName);
+              const mastery =
+                hours * getLanguageDifficultyAutonomy(languageName); // Example values for difficulty and autonomy
+              if (!icon) return null;
+
+              return (
+                <div className="flex items-start gap-2" key={languageName}>
+                  <Image
+                    key={languageName}
+                    src={icon.src}
+                    alt={icon.alt}
+                    width={16}
+                    height={16}
+                    className="rounded bg-(--off-white) p-0.5"
+                  />
+                  {languageName} Mastery:{" "}
+                  <span className="font-bold">{mastery.toFixed(2)}</span>
+                  <span className="text-(--warm-gray)"> ({hours}h)</span>
+                </div>
+                /*<Image
+                  key={languageName}
+                  src={icon.src}
+                  alt={icon.alt}
+                  width={16}
+                  height={16}
+                  className="rounded bg-(--off-white) p-0.5"
+                />*/
+              );
+            },
+          )}
         </Card>
         <Card color="bg-(--subtle-green2)" margin="mb-4">
           Stat []: Value
