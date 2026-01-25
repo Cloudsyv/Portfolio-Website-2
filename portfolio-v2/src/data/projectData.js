@@ -1,0 +1,76 @@
+export const projects = [
+  {
+    title: "Website Portfolio 2.0",
+    description:
+      "My 2nd portfolio website built with React, Next.js, and Tailwind CSS.",
+    longDescription:
+      "A complete overhaul of my portfolio website using Next.js and Tailwind CSS to create a modern, responsive, and dynamic user experience.",
+    languages: ["NextJS", "React", "TailwindCSS", "JavaScript", "Git"],
+    TimeSpent: 30,
+    StartDate: "2026-1-20",
+    EndDate: "Present",
+    image: "/projects/Website Portfolio 1.0/Thumbnail.png",
+    icon: "/icon.png",
+    href: "/projects/Website Portfolio 2.0",
+  },
+  {
+    title: "Ultimate Alchemist",
+    description:
+      "Economy-driven potion crafting system using combinations and permutations.",
+    longDescription:
+      "An in-depth alchemy system where players can gather ingredients, experiment with combinations, and create a variety of potions with unique effects. The system incorporates an economy where players can buy and sell potions, manage resources, and optimize their crafting strategies.",
+    languages: ["Lua", "Roblox"],
+    TimeSpent: 400,
+    StartDate: "2025-03-10",
+    EndDate: "Present",
+    image: "/projects/Ultimate Alchemist/Thumbnail.png",
+    icon: "/projects/Ultimate Alchemist/Icon.png",
+    href: "/projects/Ultimate Alchemist",
+  },
+  {
+    title: "Cardstruct",
+    description: "A recreation of Slay the Spire in Lua using Roblox.",
+    languages: ["Lua", "Roblox"],
+    TimeSpent: 120,
+    StartDate: "2023-07-17",
+    EndDate: "2024-05-15",
+    image: "/projects/Cardstruct/Thumbnail.png",
+    icon: "/projects/Cardstruct/Icon.png",
+    href: "/projects/Cardstruct",
+  },
+  {
+    title: "Website Portfolio 1.0",
+    description: "My first portfolio website built with only HTML and CSS.",
+    languages: ["HTML", "CSS", "Git"],
+    TimeSpent: 20,
+    StartDate: "2024-10-15",
+    EndDate: "2024-12-15",
+    image: "/projects/Website Portfolio 1.0/Thumbnail.png",
+    icon: "/projects/Website Portfolio 1.0/Icon.png",
+    href: "/projects/Website Portfolio 1.0",
+  },
+  {
+    title: "Sentou",
+    description:
+      "A pvp oriented combat system with various weapons and skills.",
+    languages: ["Lua", "Roblox"],
+    TimeSpent: 100,
+    StartDate: "2024-10-15",
+    EndDate: "2024-12-15",
+    image: "/projects/Sentou/Thumbnail.png",
+    icon: "/projects/Sentou/Icon.png",
+    href: "/projects/Sentou",
+  },
+  {
+    title: "Spirit Sentou",
+    description:
+      "An ambitious MMO style fighting game made as a passion project.",
+    languages: ["Lua", "Roblox"],
+    TimeSpent: 120,
+    StartDate: "2024-10-15",
+    EndDate: "2024-12-15",
+    image: "/projects/Spirit Sentou/Thumbnail.png",
+    icon: "/projects/Spirit Sentou/Icon.png",
+    href: "/projects/Spirit Sentou",
+  },
+];
