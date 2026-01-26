@@ -31,11 +31,49 @@
   }
 }
 
+/* Cloud shape + color */
+.cloud-move {
+  background-color: var(--off-black);
+
+  -webkit-mask-image: url("/Cloud2.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+
+  mask-image: url("/Cloud2.png");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+
+  filter: blur(1px);
+}
+
+/* Movement */
+@keyframes cloud-drift {
+  from {
+    transform: translateX(-30vw); /* start at initial left position */
+  }
+  to {
+    transform: translateX(150vw); /* move off screen right */
+  }
+}
+
+.cloud-move {
+  animation-name: cloud-drift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   transition: all var(--default-transition-duration)
     var(--default-transition-timing-function);
   font-family: var(--font-mono);
+  scroll-behavior: smooth;
+}
+
+html {
   scroll-behavior: smooth;
 }

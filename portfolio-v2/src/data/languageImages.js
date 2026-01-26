@@ -43,4 +43,8 @@ export const languageImages = {
     src: "/languages/Roblox.svg",
     alt: "Roblox Logo",
   },
+  GraphQL: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
+    alt: "GraphQL Logo",
+  },
 };

@@ -7,7 +7,22 @@ import { languageImages } from "@/data/languageImages";
 import { useEffect, useState } from "react";
 import Age from "@/components/Age";
 
+const MasteryConversion = {
+  10: "Familiar",
+  50: "Beginner",
+  150: "Novice",
+  400: "Intermediate",
+  800: "Proficient",
+  1500: "Advanced",
+  3000: "Expert",
+  4000: "Master",
+};
+
 export default function Analytics() {
+  let MasteryList = {
+    "Anime Watching": {},
+  };
+
   // Total Project Hours by Language
   const getLanguageHours = (language) => {
     let totalHours = 0;
@@ -44,46 +59,43 @@ export default function Analytics() {
       </h2>
 
       <div className="flex flex-wrap gap-4">
+        {/* Age */}
         <Card color="bg-(--subtle-blue2)" margin="mb-4">
           Time spent alive [Age]:{" "}
           <span className="font-bold">{<Age />} years</span>
         </Card>
+
+        {/* Mastery */}
         <Card color="bg-(--subtle-red2)" margin="mb-4">
           <span className="font-bold">Mastery</span>
+
+          {/* Language Mastery */}
           {Object.entries(languageImages).map(
             ([languageName, languageData]) => {
-              const icon = languageData.src;
               const hours = getLanguageHours(languageName);
               const mastery =
                 hours * getLanguageDifficultyAutonomy(languageName); // Example values for difficulty and autonomy
-              if (!icon) return null;
 
               return (
                 <div className="flex items-start gap-2" key={languageName}>
                   <Image
                     key={languageName}
-                    src={icon.src}
-                    alt={icon.alt}
+                    src={languageData.src}
+                    alt={languageData.alt}
                     width={16}
                     height={16}
                     className="rounded bg-(--off-white) p-0.5"
                   />
-                  {languageName} Mastery:{" "}
+                  {languageName}:{" "}
                   <span className="font-bold">{mastery.toFixed(2)}</span>
-                  <span className="text-(--warm-gray)"> ({hours}h)</span>
+                  <span className="text-(--dark-gray)"> ({hours}h)</span>
                 </div>
-                /*<Image
-                  key={languageName}
-                  src={icon.src}
-                  alt={icon.alt}
-                  width={16}
-                  height={16}
-                  className="rounded bg-(--off-white) p-0.5"
-                />*/
               );
             },
           )}
         </Card>
+
+        {/* Placeholder */}
         <Card color="bg-(--subtle-green2)" margin="mb-4">
           Stat []: Value
         </Card>
