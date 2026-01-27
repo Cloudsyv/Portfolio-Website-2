@@ -58,7 +58,7 @@ export default function Analytics() {
         Analytics
       </h2>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 text-(--off-black)">
         {/* Age */}
         <Card color="bg-(--subtle-blue2)" margin="mb-4">
           Time spent alive [Age]:{" "}
