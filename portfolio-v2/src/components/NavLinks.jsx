@@ -6,7 +6,7 @@ export default function NavLinks({
   textSize = "text-sm",
 }) {
   return (
-    <div className={`flex gap-3 ${textSize} font-medium ${color}`}>
+    <div className={`flex flex-wrap gap-3 ${textSize} font-medium ${color}`}>
       <a
         href="/#hero"
         className="hover:underline hover:text-(--subtle-green) transition duration-150 ease-in-out"
