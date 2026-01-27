@@ -25,7 +25,7 @@ export default function Background() {
 
   return (
     <div className="fixed inset-0 overflow-hidden">
-      {/* Sky */}
+      {/* Sky
       <div
         className="absolute inset-0 transition-colors duration-300"
         style={{
@@ -35,9 +35,9 @@ export default function Background() {
             rgb(${240 - progress * 200}, ${245 - progress * 200}, ${250 - progress * 200})
           )`,
         }}
-      />
+      />*/}
 
-      {/* Clouds layer */}
+      {/* Clouds layer
       {clouds.map((cloud, i) => (
         <div
           key={i}
@@ -52,7 +52,7 @@ export default function Background() {
             //animationDelay: `${cloud.delay}s`,
           }}
         />
-      ))}
+      ))}*/}
     </div>
   );
 }

@@ -95,10 +95,10 @@ export default function Analytics() {
           )}
         </Card>
 
-        {/* Placeholder */}
+        {/* Placeholder
         <Card color="bg-(--subtle-green2)" margin="mb-4">
           Stat []: Value
-        </Card>
+        </Card>*/}
       </div>
     </Card>
   );
