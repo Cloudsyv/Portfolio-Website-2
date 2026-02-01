@@ -5,15 +5,15 @@ import Age from "@/components/Age";
 export default function Hero() {
   return (
     <Card id="hero">
-      <h2 className="text-2xl text-(--off-black) font-semibold mb-4">About</h2>
+      <h2 className="text-2xl text-(--text-color) font-semibold mb-4">About</h2>
 
-      <p className="text-sm font-medium text-(--dark-gray)">
+      <p className="text-sm font-medium text-(--text-color2)">
         Hey I'm{" "}
         <span className="text-lg font-semibold text-(--subtle-blue)">
           Izaiah!
         </span>{" "}
         I'm a{" "}
-        <span className="text-(--off-black)">
+        <span className="text-(--subtle-green)">
           <Age />
         </span>{" "}
         year-old aspiring Full-Stack Developer with{" "}
@@ -21,11 +21,11 @@ export default function Hero() {
         years of programming experience, primarily in game development.
       </p>
 
-      <p className="mt-3 text-sm text-(--dark-gray)">
+      <p className="mt-3 text-sm text-(--text-color2)">
         I enjoy making unique and ambitious projects.
       </p>
 
-      <p className="mt-3 text-sm text-(--dark-gray)">
+      <p className="mt-3 text-sm text-(--text-color2)">
         I'm currently focused on making 3 different projects with Lua, C, and
         Javascript.
       </p>

@@ -7,7 +7,16 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bg: "var(--bg-color)",
+        text: "var(--text-color)",
+        text2: "var(--text-color2)",
+
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+      },
+    },
   },
   plugins: [typography],
 };

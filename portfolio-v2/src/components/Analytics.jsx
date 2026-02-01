@@ -54,11 +54,9 @@ export default function Analytics() {
 
   return (
     <Card id="analytics">
-      <h2 className="text-2xl text-(--off-black) font-semibold mb-4">
-        Analytics
-      </h2>
+      <h2 className="text-2xl font-semibold mb-4">Analytics</h2>
 
-      <div className="flex flex-wrap gap-4 text-(--off-black)">
+      <div className="flex flex-wrap gap-4 text-(--text-color2)">
         {/* Age */}
         <Card color="bg-(--subtle-blue2)" margin="mb-4">
           Time spent alive [Age]:{" "}

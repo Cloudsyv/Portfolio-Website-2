@@ -15,64 +15,23 @@
 
   --default-transition-duration: 0.15s;
   --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-/*@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}*/
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* Cloud shape + color */
-.cloud-move {
-  background-color: var(--off-black);
-
-  -webkit-mask-image: url("/Cloud2.png");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-
-  mask-image: url("/Cloud2.png");
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-
-  filter: blur(1px);
-}
-
-/* Movement */
-@keyframes cloud-drift {
-  from {
-    transform: translateX(-30vw); /* start at initial left position */
-  }
-  to {
-    transform: translateX(150vw); /* move off screen right */
-  }
-}
-
-.cloud-move {
-  animation-name: cloud-drift;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  will-change: transform;
+  /* semantic tokens */
+  --bg-color: var(--off-black);
+  --text-color: var(--off-white);
+  --text-color2: var(--light-gray);
+  --text-color3: var(--warm-gray);
+  --primary-color: var(--subtle-blue);
+  --secondary-color: var(--subtle-green);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-color);
+  color: var(--text-color);
   transition: all var(--default-transition-duration)
     var(--default-transition-timing-function);
   font-family: var(--font-mono);
   scroll-behavior: smooth;
-  color: var(--off-black);
 }
 
 html {
