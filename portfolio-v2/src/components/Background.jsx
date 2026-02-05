@@ -13,30 +13,8 @@ const clouds = Array.from({ length: 12 }).map((_, i) => ({
 }));
 
 export default function Background() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const progress = Math.min(scrollY / 1200, 1);
-
   return (
     <div className="fixed inset-0 overflow-hidden">
-      {/* Sky
-      <div
-        className="absolute inset-0 transition-colors duration-300"
-        style={{
-          background: `linear-gradient(
-            to bottom,
-            rgb(${240 - progress * 120}, ${240 - progress * 120}, ${240 - progress * 120}),
-            rgb(${240 - progress * 200}, ${245 - progress * 200}, ${250 - progress * 200})
-          )`,
-        }}
-      />*/}
-
       {/* Clouds layer
       {clouds.map((cloud, i) => (
         <div

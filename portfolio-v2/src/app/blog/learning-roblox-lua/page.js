@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Analytics from "@/components/Analytics";
-import ProjectCarousel from "@/components/ProjectCarousel";
 import Footer from "@/components/Footer";
 
 export default function Home() {
