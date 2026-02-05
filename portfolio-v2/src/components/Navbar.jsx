@@ -12,7 +12,8 @@ export default function Navbar() {
         <Image src="/icon.png" alt="Logo" width={64} height={64} />
         <div>
           <div className="text-2xl text-text-color font-semibold mb-1">
-            Izaiah Coleman
+            IZAIAH
+            <span className="text-(--subtle-blue2)">.DEV</span>
           </div>
 
           <NavLinks />
