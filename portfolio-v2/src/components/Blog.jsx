@@ -5,10 +5,7 @@ import { blogPosts } from "@/data/blogPosts";
 export default function Blog() {
   return (
     <Card id="blog">
-      <h2 className="text-2xl font-semibold mb-4">
-        Blog Posts{" "}
-        <span className="text-(--subtle-red)">[{blogPosts.length}]</span>
-      </h2>
+      <h2 className="text-2xl font-semibold mb-4">Blog Posts</h2>
 
       {blogPosts.map((post, index) => (
         <div key={index} className="mb-6">

@@ -31,9 +31,33 @@ body {
   transition: all var(--default-transition-duration)
     var(--default-transition-timing-function);
   font-family: var(--font-mono);
-  scroll-behavior: smooth;
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+/* Background Clouds */
+@keyframes cloud-drift {
+  0% {
+    transform: translate(-20vw, 0px);
+  }
+  25% {
+    transform: translate(15vw, 10px); /* Drift down */
+  }
+  50% {
+    transform: translate(50vw, -10px); /* Drift up */
+  }
+  75% {
+    transform: translate(85vw, 10px); /* Drift down */
+  }
+  100% {
+    transform: translate(120vw, 0px);
+  }
+}
+
+.animate-cloud {
+  animation: cloud-drift 60s linear infinite;
+  will-change: transform;
 }

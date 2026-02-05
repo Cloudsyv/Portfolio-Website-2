@@ -6,7 +6,7 @@ export default function Footer() {
       {/* Gradient */}
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-40 
-                   bg-gradient-to-t from-[#0f0f0f] to-transparent 
+                   bg-linear-to-t from-[#0f0f0f] to-transparent 
                    pointer-events-none transform scale-x-[1.5]"
         style={{ borderRadius: "50% 50% 0 0 / 100% 100% 0 0" }}
       />

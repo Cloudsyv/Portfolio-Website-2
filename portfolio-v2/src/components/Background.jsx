@@ -1,36 +1,41 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import Image from "next/image";
-
-const clouds = Array.from({ length: 12 }).map((_, i) => ({
-  top: `${Math.random() * 100}%`,
-  size: 200 + Math.random() * 300,
-  duration: 120 + Math.random() * 80,
-  opacity: 0.4 + Math.random() * 0.4,
-  delay: Math.random() * 200,
-  startX: -100 + Math.random() * 200,
-}));
 
 export default function Background() {
+  const [clouds, setClouds] = useState([]);
+
+  useEffect(() => {
+    const newClouds = Array.from({ length: 6 }).map((_, i) => ({
+      id: i,
+      top: Math.floor(Math.random() * 80) + "%",
+      width: Math.floor(Math.random() * 200) + 150 + "px",
+      duration: Math.floor(Math.random() * 40) + 40 + "s",
+      delay: Math.floor(Math.random() * -60) + "s",
+      opacity: (Math.random() * 0.4 + 0.1).toFixed(2),
+      blur: Math.random() > 0.5 ? "blur(2px)" : "none",
+    }));
+
+    setClouds(newClouds);
+  }, []);
+
   return (
-    <div className="fixed inset-0 overflow-hidden">
-      {/* Clouds layer
-      {clouds.map((cloud, i) => (
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      {clouds.map((cloud) => (
         <div
-          key={i}
-          className="absolute cloud-move"
+          key={cloud.id}
+          className="absolute animate-cloud"
           style={{
             top: cloud.top,
-            width: cloud.size,
-            height: cloud.size,
+            width: cloud.width,
             opacity: cloud.opacity,
-            animationDuration: `${cloud.duration}s`,
-            left: `${cloud.startX}vw`,
-            //animationDelay: `${cloud.delay}s`,
+            filter: cloud.blur,
+            animationDuration: cloud.duration,
+            animationDelay: cloud.delay,
           }}
-        />
-      ))}*/}
+        >
+          <img src="/cloud.png" alt="" className="w-full h-auto" />
+        </div>
+      ))}
     </div>
   );
 }
