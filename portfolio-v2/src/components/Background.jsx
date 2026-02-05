@@ -33,7 +33,7 @@ export default function Background() {
             animationDelay: cloud.delay,
           }}
         >
-          <img src="/cloud.png" alt="" className="w-full h-auto" />
+          <img src="/Cloud.png" alt="" className="w-full h-auto" />
         </div>
       ))}
     </div>

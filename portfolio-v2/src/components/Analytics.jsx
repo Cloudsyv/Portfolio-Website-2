@@ -6,6 +6,7 @@ import { projects } from "@/data/projectData";
 import { languageImages } from "@/data/languageImages";
 import { useEffect, useState } from "react";
 import Age from "@/components/Age";
+import { RadarChart } from "@mui/x-charts/RadarChart";
 
 const MasteryConversion = {
   10: "Familiar",
@@ -94,9 +95,22 @@ export default function Analytics() {
         </Card>
 
         {/* Placeholder
-        <Card color="bg-(--subtle-green2)" margin="mb-4">
-          Stat []: Value
-        </Card>*/}
+        <RadarChart
+          height={300}
+          series={[
+            { label: "Lisa", data: [120, 98, 86, 99, 85, 65], fillArea: true },
+          ]}
+          radar={{
+            metrics: [
+              { name: "Math", max: 120 },
+              { name: "Chinese", max: 120 },
+              { name: "English", max: 120 },
+              { name: "Geography", max: 120 },
+              { name: "Physics", max: 120 },
+              { name: "History", max: 120 },
+            ],
+          }}
+        />*/}
       </div>
     </Card>
   );
