@@ -6,7 +6,7 @@ import { projects } from "@/data/projectData";
 import { languageImages } from "@/data/languageImages";
 import { useEffect, useState } from "react";
 import Age from "@/components/Age";
-import { RadarChart } from "@mui/x-charts/RadarChart";
+//import { RadarChart } from "@mui/x-charts/RadarChart";
 
 const MasteryConversion = {
   10: "Familiar",
