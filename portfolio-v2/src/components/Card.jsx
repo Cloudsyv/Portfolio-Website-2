@@ -1,6 +1,6 @@
 export default function Card({
   id,
-  color = "bg-(--light-gray)",
+  color = "bg-(--dark-gray)/30",
   divClassName = "px-6 py-4",
   margin = "mb-12",
   children,
@@ -8,7 +8,7 @@ export default function Card({
   return (
     <section
       id={id}
-      className={`w-full rounded-sm shadow-xl/30 ${margin} ${color}`}
+      className={`w-full rounded-2xl shadow-xl/30 ${margin} ${color}`}
     >
       <div className={divClassName}>{children}</div>
     </section>

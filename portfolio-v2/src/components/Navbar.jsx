@@ -11,8 +11,9 @@ export default function Navbar() {
       <div className="flex gap-4 items-center">
         <Image src="/icon.png" alt="Logo" width={64} height={64} />
         <div>
-          <div className="text-2xl text-(--off-black) font-semibold mb-1">
-            Izaiah Coleman
+          <div className="text-2xl text-text-color font-semibold mb-1">
+            IZAIAH
+            <span className="text-(--subtle-blue2)">.DEV</span>
           </div>
 
           <NavLinks />
