@@ -1,6 +1,22 @@
 export const projects = [
   {
+    title: "Nimbus CLI",
+    slug: "Nimbus-CLI",
+    description: "A CLI that generates a 3D spinning Cloud.",
+    longDescription:
+      "A CLI that generates a 3D spinning Cloud. (Matrices, Tensors, Sparse Representation, and Voxels)",
+    languages: ["Python", "Git"],
+    TimeSpent: 0,
+    ObjectiveDifficulty: 8,
+    Autonomy: 0.75,
+    StartDate: "2026-2-06",
+    EndDate: "Present",
+    image: "/projects/Nimbus CLI/Thumbnail.png",
+    icon: "/projects/Nimbus CLI/Icon.png",
+  },
+  {
     title: "Website Portfolio 2.0",
+    slug: "Website-Portfolio-2.0",
     description:
       "My 2nd portfolio website built with React, Next.js, and Tailwind CSS.",
     longDescription:
@@ -11,12 +27,12 @@ export const projects = [
     Autonomy: 0.75,
     StartDate: "2026-1-20",
     EndDate: "Present",
-    image: "/projects/Website Portfolio 1.0/Thumbnail.png",
+    image: "/projects/Website Portfolio 2.0/Thumbnail.png",
     icon: "/icon.png",
-    href: "/projects/Website Portfolio 2.0",
   },
   {
     title: "Ultimate Alchemist",
+    slug: "Ultimate-Alchemist",
     description:
       "Economy-driven potion crafting system using combinations and permutations.",
     longDescription:
@@ -29,10 +45,10 @@ export const projects = [
     EndDate: "Present",
     image: "/projects/Ultimate Alchemist/Thumbnail.png",
     icon: "/projects/Ultimate Alchemist/Icon.png",
-    href: "/projects/Ultimate Alchemist",
   },
   {
     title: "Cardstruct",
+    slug: "Cardstruct",
     description: "A recreation of Slay the Spire in Lua using Roblox.",
     languages: ["Lua", "Roblox"],
     TimeSpent: 120,
@@ -42,10 +58,10 @@ export const projects = [
     EndDate: "2024-05-15",
     image: "/projects/Cardstruct/Thumbnail.png",
     icon: "/projects/Cardstruct/Icon.png",
-    href: "/projects/Cardstruct",
   },
   {
     title: "Website Portfolio 1.0",
+    slug: "Website-Portfolio-1.0",
     description: "My first portfolio website built with only HTML and CSS.",
     languages: ["HTML", "CSS", "Git"],
     TimeSpent: 20,
@@ -55,10 +71,10 @@ export const projects = [
     EndDate: "2024-12-15",
     image: "/projects/Website Portfolio 1.0/Thumbnail.png",
     icon: "/projects/Website Portfolio 1.0/Icon.png",
-    href: "/projects/Website Portfolio 1.0",
   },
   {
     title: "Sentou",
+    slug: "Sentou",
     description:
       "A pvp oriented combat system with various weapons and skills.",
     languages: ["Lua", "Roblox"],
@@ -69,10 +85,10 @@ export const projects = [
     EndDate: "2024-12-15",
     image: "/projects/Sentou/Thumbnail.png",
     icon: "/projects/Sentou/Icon.png",
-    href: "/projects/Sentou",
   },
   {
     title: "Spirit Sentou",
+    slug: "Spirit-Sentou",
     description:
       "An ambitious MMO style fighting game made as a passion project.",
     languages: ["Lua", "Roblox"],
@@ -83,6 +99,5 @@ export const projects = [
     EndDate: "2024-12-15",
     image: "/projects/Spirit Sentou/Thumbnail.png",
     icon: "/projects/Spirit Sentou/Icon.png",
-    href: "/projects/Spirit Sentou",
   },
 ];

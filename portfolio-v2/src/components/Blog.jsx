@@ -11,7 +11,7 @@ export default function Blog() {
         <div key={index} className="mb-6">
           <p className="text-sm text-(--text-color3)">{post.date}</p>
           <a
-            href={post.url}
+            href={`/blog/${post.slug}`}
             className="text-(--text-color2) underline hover:text-(--subtle-green) transition duration-150 ease-in-out"
           >
             {post.title}

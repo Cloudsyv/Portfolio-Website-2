@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { languageImages } from "@/data/languageImages";
+import LanguageList from "@/components/LanguageList";
 
 export default function ProjectCard({ project }) {
   return (
-    <Link href={project.href}>
+    <Link href={`/projects/${project.slug}`}>
       {/* Thumbnail */}
       <div className="group relative w-full h-full bg-white shadow-2xl rounded-2xl overflow-hidden">
         <Image
@@ -44,26 +45,7 @@ export default function ProjectCard({ project }) {
 
           {/* Sub-content*/}
           <div className="pt-3 space-y-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-            {/* Languages */}
-            <div className="flex flex-wrap gap-2">
-              {project.languages.map((language) => {
-                const icon = languageImages[language];
-                if (!icon) return null;
-                return (
-                  <div
-                    key={language}
-                    className="bg-(--off-white)/50 p-1.5 rounded-md"
-                  >
-                    <Image
-                      src={icon.src}
-                      alt={icon.alt}
-                      width={18}
-                      height={18}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+            <LanguageList project={project} />
 
             {/* Description */}
             <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">

@@ -2,6 +2,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Background from "@/components/Background";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,10 +36,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="font-mono bg-(--dark-bg) text-white antialiased">
+        <Background />
+
+        <div className="relative z-20 flex justify-center mt-8">
+          <div className="w-full max-w-225 px-8">
+            <Navbar />
+          </div>
+        </div>
+
+        <main className="relative z-10 flex flex-col items-center">
+          <div className="w-full max-w-225 px-8">{children}</div>
+        </main>
+
+        <Footer />
       </body>
     </html>
   );

@@ -47,4 +47,8 @@ export const languageImages = {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
     alt: "GraphQL Logo",
   },
+  Python: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    alt: "Python Logo",
+  },
 };
