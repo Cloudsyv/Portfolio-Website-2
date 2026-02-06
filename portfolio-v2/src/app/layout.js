@@ -1,20 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Izaiah Coleman",
@@ -31,6 +20,7 @@ export const metadata = {
     "Computer Science",
     "Software Engineer",
   ],
+  metadataBase: new URL("https://izaiah.dev"),
 };
 
 export default function RootLayout({ children }) {
@@ -47,6 +37,7 @@ export default function RootLayout({ children }) {
 
         <main className="relative z-10 flex flex-col items-center">
           <div className="w-full max-w-225 px-8">{children}</div>
+          <SpeedInsights />
         </main>
 
         <Footer />
