@@ -32,12 +32,28 @@ export const projects = [
   },
   {
     title: "Ultimate Alchemist",
-    slug: "Ultimate-Alchemist",
+    slug: "ultimate-alchemist",
     description:
       "Economy-driven potion crafting system using combinations and permutations.",
     longDescription:
       "An in-depth alchemy system where players can gather ingredients, experiment with combinations, and create a variety of potions with unique effects. The system incorporates an economy where players can buy and sell potions, manage resources, and optimize their crafting strategies.",
     languages: ["Lua", "Roblox"],
+    detailedContent: [
+      {
+        type: "text",
+        content: "Text.",
+      },
+      {
+        type: "image",
+        url: "/projects/Ultimate.Alchemist.png",
+        caption: "Image.",
+      },
+      {
+        type: "callout",
+        content: "Callout.",
+      },
+      { type: "text", content: "Text." },
+    ],
     TimeSpent: 400,
     ObjectiveDifficulty: 5,
     Autonomy: 1.75,
