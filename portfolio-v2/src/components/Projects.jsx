@@ -11,16 +11,9 @@ export default function Projects() {
 
   return (
     <Card id="projects">
-      <div className="flex justify-between items-end mb-6">
-        <h2 className="text-2xl text-text-color font-semibold">Projects</h2>
-
-        {
-          <span className="text-sm opacity-50 font-mono mb-1">
-            Showing {showAll ? projects.length : initDisplay} of{" "}
-            {projects.length}
-          </span>
-        }
-      </div>
+      <h2 className="mb-6 text-sm md:text-base font-bold uppercase tracking-[0.3em] text-zinc-500 border-b border-white/5 pb-2 w-fit">
+        Projects
+      </h2>
 
       <div className="grid grid-cols-1 transition-all duration-500 ease-in-out">
         {projects.map((project, index) => {
@@ -39,14 +32,17 @@ export default function Projects() {
         })}
       </div>
 
-      {/* View Toggle */}
+      {/* View Toggle*/}
       {projects.length > initDisplay && (
-        <div className="mt-8 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 border border-(--subtle-blue2)/30 rounded-2xl text-sm hover:bg-(--subtle-blue2)/10 transition-colors font-mono"
+            className="group relative px-8 py-3 bg-white/5 border border-white/10 rounded-xl text-xs font-mono uppercase tracking-[0.2em] text-zinc-400 hover:text-white hover:bg-white/10 transition-all overflow-hidden"
           >
-            {showAll ? "↑ Show Less" : "↓ View All Projects"}
+            <span className="relative z-10 flex items-center gap-2">
+              {showAll ? "↑ Minimize" : "↓ Expand"}
+            </span>
+            <div className="absolute inset-0 bg-(--subtle-blue) opacity-0 group-hover:opacity-10 transition-opacity blur-xl" />
           </button>
         </div>
       )}

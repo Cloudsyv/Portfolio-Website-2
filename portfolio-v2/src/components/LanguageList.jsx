@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { languageImages } from "@/data/languageImages";
 import Tooltip from "@mui/material/Tooltip";
@@ -15,7 +14,7 @@ export default function LanguageList({
         if (!icon) return null;
         return (
           <Tooltip key={language} title={language}>
-            <div className={`${color} p-1.5 rounded-md`}>
+            <div key={language} className={`${color} p-1.5 rounded-md`}>
               <Image src={icon.src} alt={icon.alt} width={size} height={size} />
             </div>
           </Tooltip>

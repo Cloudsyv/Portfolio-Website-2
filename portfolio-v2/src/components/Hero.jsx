@@ -5,37 +5,38 @@ import Age from "@/components/Age";
 export default function Hero() {
   return (
     <Card id="hero">
-      <h2 className="text-2xl text-(--text-color) font-semibold mb-4">About</h2>
+      <h2 className="text-sm md:text-base font-bold uppercase tracking-[0.3em] text-zinc-500 mb-6 block border-b border-white/5 pb-2 w-fit">
+        About
+      </h2>
 
-      <p className="text-sm font-medium text-(--text-color2)">
-        Hey I'm{" "}
-        <span className="text-lg font-semibold text-(--subtle-blue)">
-          Izaiah!
-        </span>{" "}
-        I'm a{" "}
-        <span className="text-(--subtle-green)">
-          <Age />
-        </span>{" "}
-        year-old aspiring Full-Stack Developer with{" "}
-        <span className="text-lg font-semibold text-(--subtle-red)">4+</span>{" "}
-        years of programming experience, primarily in game development.
-      </p>
+      <div className="">
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-white">
+          Hey, I'm <span className="text-(--subtle-blue)">Izaiah.</span>
+        </h1>
 
-      <p className="mt-3 text-sm text-(--text-color2)">
-        I enjoy making unique and ambitious projects.
-      </p>
+        <p className="text-lg md:text-2xl font-medium text-zinc-300 leading-relaxed max-w-2xl">
+          I'm a <Age /> year-old aspiring{" "}
+          <span className="text-(--subtle-green)">Full-Stack Developer</span>{" "}
+          with
+          <span className="text-(--subtle-red) ml-2">4+ years</span> of
+          experience building ambitious projects in game dev and web tech.
+        </p>
 
-      <p className="mt-3 text-sm text-(--text-color2)">
-        I'm currently focused on making 3 different projects with Lua, C, and
-        Javascript.
-      </p>
-
-      <a
-        href="#analytics"
-        className="mt-4 inline-block text-sm font-medium text-(--subtle-blue)  hover:underline hover:text-(--subtle-green) transition duration-150 ease-in-out"
-      >
-        View my tech stack analytics →
-      </a>
+        <div className="mt-10 flex items-center gap-4">
+          <a
+            href="#projects"
+            className="px-6 py-2 bg-white text-black rounded-full font-bold text-sm hover:bg-zinc-200 transition"
+          >
+            View Work
+          </a>
+          <a
+            href="#analytics"
+            className="text-sm font-mono text-zinc-500 hover:text-(--subtle-blue) transition"
+          >
+            Stack Analytics →
+          </a>
+        </div>
+      </div>
     </Card>
   );
 }

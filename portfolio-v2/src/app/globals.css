@@ -30,6 +30,7 @@ body {
   color: var(--text-color);
   transition: all var(--default-transition-duration)
     var(--default-transition-timing-function);
+  -webkit-font-smoothing: antialiased;
   font-family: var(--font-mono);
 }
 
