@@ -6,19 +6,29 @@ export default function Navbar() {
   return (
     <Card
       id="navbar"
-      divClassName="flex items-center justify-between px-6 py-4"
+      divClassName="flex flex-col md:flex-row items-center justify-between px-6 py-6"
     >
-      <div className="flex gap-4 items-center">
-        <Image src="/icon.png" alt="Logo" width={64} height={64} />
-        <div>
-          <div className="text-2xl text-text-color font-semibold mb-1">
-            IZAIAH
-            <span className="text-(--subtle-blue2)">.DEV</span>
-          </div>
+      <div className="flex gap-5 items-center mb-4 md:mb-0">
+        <div className="relative w-12 h-12">
+          <Image
+            src="/icon.png"
+            alt="Logo"
+            fill
+            className="rounded-xl object-cover"
+          />
+        </div>
 
-          <NavLinks />
+        <div>
+          <div className="text-xl md:text-2xl font-black tracking-tighter text-white">
+            IZAIAH<span className="text-(--subtle-blue2)">.DEV</span>
+          </div>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500">
+            Full-Stack Developer
+          </p>
         </div>
       </div>
+
+      <NavLinks />
     </Card>
   );
 }
