@@ -51,4 +51,8 @@ export const languageImages = {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
     alt: "Python Logo",
   },
+  Trello: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg",
+    alt: "Trello Logo",
+  },
 };

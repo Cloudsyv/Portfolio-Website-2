@@ -46,7 +46,7 @@ export const projects = [
       "Economy-driven potion crafting system using combinations and permutations.",
     longDescription:
       "An in-depth alchemy system where players can gather ingredients, experiment with combinations, and create a variety of potions with unique effects. The system incorporates an economy where players can buy and sell potions, manage resources, and optimize their crafting strategies.",
-    languages: ["Lua", "Roblox"],
+    languages: ["Lua", "Roblox", "Trello"],
     detailedContent: [
       {
         type: "text",
@@ -75,7 +75,7 @@ export const projects = [
     title: "Cardstruct",
     slug: "Cardstruct",
     description: "A recreation of Slay the Spire in Lua using Roblox.",
-    languages: ["Lua", "Roblox"],
+    languages: ["Lua", "Roblox", "Trello"],
     TimeSpent: 120,
     ObjectiveDifficulty: 6,
     Autonomy: 1.4,
@@ -116,7 +116,7 @@ export const projects = [
     slug: "Spirit-Sentou",
     description:
       "An ambitious MMO style fighting game made as a passion project.",
-    languages: ["Lua", "Roblox"],
+    languages: ["Lua", "Roblox", "Trello"],
     TimeSpent: 120,
     ObjectiveDifficulty: 5,
     Autonomy: 0.75,
