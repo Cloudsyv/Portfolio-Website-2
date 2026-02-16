@@ -1,7 +1,7 @@
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 

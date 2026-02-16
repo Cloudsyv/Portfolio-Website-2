@@ -1,6 +1,6 @@
 // src/components/Contact.jsx
-import Card from "@/components/Card";
-import SocialIcon from "@/components/SocialIcon";
+import Card from "@/components/Util/Card";
+import SocialIcon from "@/components/Util/SocialIcon";
 
 export default function Contact() {
   return (

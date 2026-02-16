@@ -1,11 +1,11 @@
 import { getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Card from "@/components/Card";
+import Card from "@/components/Util/Card";
 
 export default async function BlogPage({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = getPostBySlug(slug, "src/content/blog");
 
   if (!post) {
     notFound();

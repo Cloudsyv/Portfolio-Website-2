@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { languageImages } from "@/data/languageImages";
-import LanguageList from "@/components/LanguageList";
+import LanguageList from "@/components/Util/LanguageList";
 
 export default function ProjectCard({ project }) {
   return (
@@ -22,7 +21,7 @@ export default function ProjectCard({ project }) {
         {/* Date */}
         <div className="absolute top-4 right-4 overflow-hidden">
           <span className="block text-md text-white/60 font-mono transform translate-x-20 group-hover:translate-x-0 transition-transform duration-500">
-            {project.EndDate}
+            {project.endDate}
           </span>
         </div>
 

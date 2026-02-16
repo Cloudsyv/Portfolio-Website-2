@@ -1,9 +1,9 @@
-import Card from "@/components/Card";
-import { getAllPosts } from "@/lib/posts"; // No longer need the static blogPosts import
+import Card from "@/components/Util/Card";
+import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
 
 export default function Blog() {
-  const posts = getAllPosts();
+  const posts = getAllPosts("src/content/blog");
 
   return (
     <Card id="blog">

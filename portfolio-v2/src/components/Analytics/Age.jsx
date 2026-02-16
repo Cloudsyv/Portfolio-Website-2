@@ -10,13 +10,13 @@ export default function Age() {
   useEffect(() => {
     const updateAge = () => {
       const now = new Date();
-      const diffMs = now - birthDate; // difference in milliseconds
-      const years = diffMs / (1000 * 60 * 60 * 24 * 365.25); // convert ms → years
-      setAge(years.toFixed(2)); // 2 decimal places
+      const diffMs = now - birthDate;
+      const years = diffMs / (1000 * 60 * 60 * 24 * 365.25);
+      setAge(years.toFixed(2));
     };
 
     updateAge();
-    const intervalId = setInterval(updateAge, 60 * 1000); // update every minute
+    const intervalId = setInterval(updateAge, 60 * 1000);
     return () => clearInterval(intervalId);
   }, []);
 

@@ -3,9 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
-const postsDirectory = path.join(process.cwd(), "src/content/blog");
+export function getAllPosts(postsDirectory) {
+  postsDirectory = path.join(process.cwd(), postsDirectory);
 
-export function getAllPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
 
   const allPostsData = fileNames.map((fileName) => {
@@ -24,11 +24,24 @@ export function getAllPosts() {
     };
   });
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allPostsData.sort((a, b) => {
+    const parseDate = (dateStr) => {
+      if (!dateStr) return new Date(0);
+
+      if (dateStr.toLowerCase() === "present") return new Date();
+      return new Date(dateStr);
+    };
+
+    const dateA = parseDate(a.startDate || a.publishDate);
+    const dateB = parseDate(b.startDate || b.publishDate);
+
+    return dateB - dateA;
+  });
 }
 
-export function getPostBySlug(slug) {
+export function getPostBySlug(slug, postsDirectory) {
   try {
+    postsDirectory = path.join(process.cwd(), postsDirectory);
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);

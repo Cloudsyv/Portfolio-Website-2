@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Card from "@/components/Card";
-import Age from "@/components/Age";
+import Card from "@/components/Util/Card";
 
 export default function Loading() {
   return <Card id="hero"></Card>;

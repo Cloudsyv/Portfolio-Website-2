@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Card from "@/components/Card";
-import NavLinks from "@/components/NavLinks";
+import Card from "@/components/Util/Card";
+import NavLinks from "./NavLinks";
 
 export default function Navbar() {
   return (

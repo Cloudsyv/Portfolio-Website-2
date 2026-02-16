@@ -55,4 +55,16 @@ export const languageImages = {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg",
     alt: "Trello Logo",
   },
+  Netlify: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+    alt: "Netlify Logo",
+  },
+  Vercel: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    alt: "Vercel Logo",
+  },
+  PyPI: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg",
+    alt: "PyPI Logo",
+  },
 };

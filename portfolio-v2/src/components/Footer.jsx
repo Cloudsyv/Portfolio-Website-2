@@ -1,4 +1,4 @@
-import NavLinks from "@/components/NavLinks";
+import NavLinks from "@/components/Nav/NavLinks";
 
 export default function Footer() {
   return (
