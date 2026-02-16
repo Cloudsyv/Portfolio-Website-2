@@ -1,6 +1,7 @@
 import Card from "@/components/Util/Card";
 import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
+import Draft from "@/components/Util/Draft";
 
 export default function Blog() {
   const posts = getAllPosts("src/content/blog");
@@ -24,9 +25,13 @@ export default function Blog() {
                 {/* Title and Description */}
                 <div className="flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-1">
-                    <h3 className="text-lg font-bold text-zinc-200 group-hover:text-(--subtle-blue2) transition-all">
-                      {post.title}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="text-lg font-bold text-zinc-200 group-hover:text-(--subtle-blue2) transition-all">
+                        {post.title}
+                      </h3>
+
+                      <Draft post={post} />
+                    </div>
                   </div>
 
                   <p className="text-sm text-zinc-500 line-clamp-1 font-medium italic">

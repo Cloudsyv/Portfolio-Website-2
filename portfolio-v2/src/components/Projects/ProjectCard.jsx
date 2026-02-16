@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LanguageList from "@/components/Util/LanguageList";
+import Draft from "@/components/Util/Draft";
 
 export default function ProjectCard({ project }) {
   return (
@@ -40,7 +41,11 @@ export default function ProjectCard({ project }) {
           />
 
           {/* Title */}
-          <div className="text-lg font-semibold">{project.title}</div>
+          <div className="flex items-center gap-3 mb-1">
+            <h3 className="text-lg font-bold text-zinc-200">{project.title}</h3>
+
+            <Draft post={project} />
+          </div>
 
           {/* Sub-content*/}
           <div className="pt-3 space-y-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
