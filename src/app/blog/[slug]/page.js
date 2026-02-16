@@ -12,7 +12,7 @@ export default async function BlogPage({ params }) {
   }
 
   return (
-    <main className="min-h-screen py-10 px-4 md:px-0">
+    <main className="min-h-screen">
       <Card>
         {/* Header Section */}
         <header className="mb-12 border-b border-white/10 pb-8">
