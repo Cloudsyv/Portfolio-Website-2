@@ -1,5 +1,6 @@
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         <main className="relative z-10 flex flex-col items-center">
           <div className="w-full max-w-225 px-8">{children}</div>
           <SpeedInsights />
+          <Analytics />
         </main>
 
         <Footer />
