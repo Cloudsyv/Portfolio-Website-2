@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
   return (
     <Link href={`/projects/${project.slug}`}>
       {/* Thumbnail */}
-      <div className="group relative w-full h-full bg-white shadow-2xl rounded-2xl overflow-hidden">
+      <div className="group relative w-full h-full shadow-2xl rounded-2xl overflow-hidden">
         <Image
           src={project.image}
           alt={project.title}
