@@ -23,7 +23,7 @@ export default function ProjectCard({ project }) {
 
         {/* Date */}
         <div className="absolute top-4 right-4 overflow-hidden">
-          <span className="block text-md text-white/60 font-mono transform translate-x-80 group-hover:translate-x-0 transition-transform duration-500">
+          <span className="block text-md text-white/60 font-mono transform translate-x-110 group-hover:translate-x-0 transition-transform duration-500">
             {project.startDate}
             {" - "}
             {project.endDate}
