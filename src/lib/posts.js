@@ -39,8 +39,8 @@ export function getAllPosts(postsDirectory) {
       return new Date(dateStr);
     };
 
-    const dateA = parseDate(a.startDate || a.publishDate);
-    const dateB = parseDate(b.startDate || b.publishDate);
+    const dateA = parseDate(a.endDate || a.publishDate);
+    const dateB = parseDate(b.endDate || b.publishDate);
 
     return dateB - dateA;
   });

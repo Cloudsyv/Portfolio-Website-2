@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import LanguageList from "@/components/Util/LanguageList";
 import Draft from "@/components/Util/Draft";
+import DateTimeDifference from "@/components/Util/DateTimeDifference";
 
 export default function ProjectCard({ project }) {
   return (
@@ -21,8 +23,18 @@ export default function ProjectCard({ project }) {
 
         {/* Date */}
         <div className="absolute top-4 right-4 overflow-hidden">
-          <span className="block text-md text-white/60 font-mono transform translate-x-20 group-hover:translate-x-0 transition-transform duration-500">
+          <span className="block text-md text-white/60 font-mono transform translate-x-80 group-hover:translate-x-0 transition-transform duration-500">
+            {project.startDate}
+            {" - "}
             {project.endDate}
+            {" ["}
+            {
+              <DateTimeDifference
+                start={project.startDate}
+                end={project.endDate}
+              />
+            }
+            {"]"}
           </span>
         </div>
 
