@@ -1,9 +1,16 @@
 import { getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import rehypePrettyCode from "rehype-pretty-code";
+
 import Card from "@/components/Util/Card";
 import LanguageList from "@/components/Util/LanguageList";
 import Image from "next/image";
+import YouTube from "@/components/Markdown/Youtube";
+
+const components = {
+  YouTube,
+};
 
 export default async function ProjectPage({ params }) {
   const { slug } = await params;
@@ -65,11 +72,27 @@ export default async function ProjectPage({ params }) {
           className="prose prose-invert prose-cactus max-w-none 
           prose-headings:font-bold prose-headings:tracking-tight
           prose-a:text-sky-400 prose-a:no-underline hover:prose-a:underline
-          prose-code:text-pink-400 prose-code:bg-zinc-800 prose-code:px-1 prose-code:rounded
+           
           prose-pre:bg-zinc-900/50 prose-pre:border prose-pre:border-white/10
           prose-img:rounded-xl"
         >
-          <MDXRemote source={post.content} />
+          <MDXRemote
+            source={post.content}
+            components={components}
+            options={{
+              mdxOptions: {
+                rehypePlugins: [
+                  [
+                    rehypePrettyCode,
+                    {
+                      theme: "github-dark",
+                      keepBackground: false,
+                    },
+                  ],
+                ],
+              },
+            }}
+          />
         </article>
       </Card>
     </main>

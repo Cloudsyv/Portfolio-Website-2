@@ -67,4 +67,8 @@ export const languageImages = {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pypi/pypi-original.svg",
     alt: "PyPI Logo",
   },
+  Markdown: {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg",
+    alt: "Markdown Logo",
+  },
 };

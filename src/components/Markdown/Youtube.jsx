@@ -1,0 +1,13 @@
+export default function YouTube({ id }) {
+  return (
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden my-8 border border-white/10 shadow-2xl shadow-sky-500/5">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${id}`}
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+}
